@@ -4,7 +4,7 @@
 #
 Name     : R-ade4
 Version  : 1.7.10
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-10.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-10.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
@@ -12,8 +12,10 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-ade4-lib
 Requires: R-CircStats
+Requires: R-adephylo
 Requires: R-spdep
 BuildRequires : R-CircStats
+BuildRequires : R-adephylo
 BuildRequires : R-spdep
 BuildRequires : clr-R-helpers
 
@@ -36,11 +38,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521198824
+export SOURCE_DATE_EPOCH=1521223943
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521198824
+export SOURCE_DATE_EPOCH=1521223943
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
