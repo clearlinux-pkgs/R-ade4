@@ -1,1 +1,5 @@
 # This file contains recursive sources that require this package
+R-analogue
+R-bipartite
+R-dtw
+R-vegan
