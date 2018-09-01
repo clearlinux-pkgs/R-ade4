@@ -1,5 +1,7 @@
 # This file contains recursive sources that require this package
-R-analogue
-R-bipartite
-R-dtw
+R-adegenet
+R-adegraphics
+R-adephylo
+R-phylobase
+R-seqinr
 R-vegan
