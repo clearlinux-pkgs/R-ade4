@@ -4,15 +4,13 @@
 #
 Name     : R-ade4
 Version  : 1.7.13
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-13.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-ade4-lib
-Requires: R-CircStats
-Requires: R-spdep
+Requires: R-ade4-lib = %{version}-%{release}
 BuildRequires : R-CircStats
 BuildRequires : R-spdep
 BuildRequires : buildreq-R
@@ -36,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1535768182
+export SOURCE_DATE_EPOCH=1552708200
 
 %install
+export SOURCE_DATE_EPOCH=1552708200
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1535768182
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -75,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ade4|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  ade4 || :
 
 
 %files
@@ -211,7 +208,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/ade4/help/paths.rds
 /usr/lib64/R/library/ade4/html/00Index.html
 /usr/lib64/R/library/ade4/html/R.css
-/usr/lib64/R/library/ade4/libs/symbols.rds
 /usr/lib64/R/library/ade4/pictures/atyacarto.pnm
 /usr/lib64/R/library/ade4/pictures/atyadigi.pnm
 /usr/lib64/R/library/ade4/pictures/avijonseau.pnm
