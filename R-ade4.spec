@@ -4,20 +4,17 @@
 #
 Name     : R-ade4
 Version  : 1.7.15
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-15.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-ade4-lib = %{version}-%{release}
-Requires: R-CircStats
+Requires: R-pixmap
 Requires: R-sp
-Requires: R-spdep
-BuildRequires : R-CircStats
 BuildRequires : R-pixmap
 BuildRequires : R-sp
-BuildRequires : R-spdep
 BuildRequires : buildreq-R
 
 %description
@@ -33,21 +30,22 @@ lib components for the R-ade4 package.
 
 %prep
 %setup -q -c -n ade4
+cd %{_builddir}/ade4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581699724
+export SOURCE_DATE_EPOCH=1589410589
 
 %install
-export SOURCE_DATE_EPOCH=1581699724
+export SOURCE_DATE_EPOCH=1589410589
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
