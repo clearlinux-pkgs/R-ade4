@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
+R-Guerry
 R-adegenet
 R-adegraphics
 R-adephylo
+R-adespatial
 R-phylobase
 R-seqinr
