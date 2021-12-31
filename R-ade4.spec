@@ -4,7 +4,7 @@
 #
 Name     : R-ade4
 Version  : 1.7.18
-Release  : 52
+Release  : 53
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-18.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640883859
+export SOURCE_DATE_EPOCH=1640965511
 
 %install
-export SOURCE_DATE_EPOCH=1640883859
+export SOURCE_DATE_EPOCH=1640965511
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
