@@ -4,7 +4,7 @@
 #
 Name     : R-ade4
 Version  : 1.7.19
-Release  : 56
+Release  : 57
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-19.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-19.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
