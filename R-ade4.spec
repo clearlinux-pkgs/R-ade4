@@ -4,7 +4,7 @@
 #
 Name     : R-ade4
 Version  : 1.7.22
-Release  : 61
+Release  : 62
 URL      : https://cran.r-project.org/src/contrib/ade4_1.7-22.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ade4_1.7-22.tar.gz
 Summary  : Analysis of Ecological Data: Exploratory and Euclidean Methods
@@ -20,9 +20,6 @@ BuildRequires : R-RcppArmadillo
 BuildRequires : R-pixmap
 BuildRequires : R-sp
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 No detailed description available
@@ -44,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675701170
+export SOURCE_DATE_EPOCH=1678809992
 
 %install
-export SOURCE_DATE_EPOCH=1675701170
+export SOURCE_DATE_EPOCH=1678809992
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
